@@ -31,6 +31,11 @@ def home():
 
 @app.route("/predict", methods=["POST"])
 def predict():
+@app.route("/categories", methods=["GET"])
+def get_categories():
+    region_classes = label_encoders["region"].classes_.tolist()  # Get available categories
+    return jsonify({"available_regions": region_classes})
+
     try:
         data = request.json  # Expecting JSON input
 
