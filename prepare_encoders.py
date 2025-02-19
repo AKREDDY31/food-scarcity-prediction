@@ -2,14 +2,20 @@ import pandas as pd
 import pickle
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 
-# Load dataset
-df = pd.read_csv("dataset.csv")  # Ensure this file is in your project
+# Load dataset (Ensure dataset.csv is available in the project directory)
+df = pd.read_csv("dataset.csv")
 
 # Define categorical and numerical columns
 categorical_cols = ['region', 'crop_type', 'irrigation', 'soil_quality', 'harvest_period']
-numerical_cols = [col for col in df.columns if col not in categorical_cols + ["category", "forecast_yield"]]
 
-# Apply Label Encoding to categorical columns
+# Ensure categorical columns are strings and convert to lowercase (to avoid mismatches)
+df[categorical_cols] = df[categorical_cols].astype(str).apply(lambda x: x.str.lower().str.strip())
+
+# Identify numerical columns dynamically
+excluded_cols = categorical_cols + ["category", "forecast_yield"]
+numerical_cols = [col for col in df.columns if col not in excluded_cols]
+
+# Apply Label Encoding to categorical columns and save encoders
 label_encoders = {}
 for col in categorical_cols:
     le = LabelEncoder()
@@ -20,12 +26,10 @@ for col in categorical_cols:
     with open(f"{col}_encoder.pkl", "wb") as f:
         pickle.dump(le, f)
 
-# Standardize numerical columns
+# Standardize numerical columns and save scaler
 scaler = StandardScaler()
-df_numerical = df[numerical_cols]
-df_numerical_scaled = scaler.fit_transform(df_numerical)
+df_numerical_scaled = scaler.fit_transform(df[numerical_cols])
 
-# Save StandardScaler
 with open("scaler.pkl", "wb") as f:
     pickle.dump(scaler, f)
 
