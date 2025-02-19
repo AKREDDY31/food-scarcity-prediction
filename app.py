@@ -29,13 +29,14 @@ with open("scaler.pkl", "rb") as f:
 def home():
     return jsonify({"message": "Food Scarcity Prediction API is running!"})
 
-@app.route("/predict", methods=["POST"])
-def predict():
 @app.route("/categories", methods=["GET"])
 def get_categories():
-    region_classes = label_encoders["region"].classes_.tolist()  # Get available categories
-    return jsonify({"available_regions": region_classes})
+    """Returns available categories for debugging."""
+    categories = {col: label_encoders[col].classes_.tolist() for col in categorical_cols}
+    return jsonify(categories)
 
+@app.route("/predict", methods=["POST"])
+def predict():
     try:
         data = request.json  # Expecting JSON input
 
@@ -47,7 +48,11 @@ def get_categories():
             if user_input in label_encoders[col].classes_:
                 input_features.append(label_encoders[col].transform([user_input])[0])
             else:
-                return jsonify({"error": f"Invalid value for {col}: {data[col]}"})
+                available_values = label_encoders[col].classes_.tolist()
+                return jsonify({
+                    "error": f"Invalid value for {col}: {data[col]}",
+                    "valid_options": available_values
+                })
 
         # Convert and scale numerical inputs
         numerical_inputs = np.array(data["numerical_features"]).reshape(1, -1)
