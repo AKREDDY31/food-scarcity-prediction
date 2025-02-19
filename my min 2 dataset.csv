@@ -1,0 +1,70 @@
+year,region,temperature,rainfall,crop_yield,crop_type,irrigation,soil_quality,fertilizer_usage,price,category,forecast_yield,harvest_period,pest_loss
+2000,Coastal Andhra,28.5,880,2400,Rice,Irrigated,Good,150,20,Surplus,2450,Kharif,5
+2000,Rayalaseema,29.0,860,2200,Wheat,Rainfed,Poor,170,22,Shortage,2150,Rabi,12
+2000,North Andhra,28.2,875,2300,Rice,Irrigated,Good,140,19,Surplus,2350,Summer,6
+2001,Coastal Andhra,28.7,885,2450,Rice,Irrigated,Good,160,21,Surplus,2500,Kharif,6
+2001,Rayalaseema,29.2,860,2250,Cotton,Rainfed,Poor,180,20,Shortage,2200,Rabi,14
+2001,North Andhra,28.3,880,2350,Rice,Irrigated,Good,150,22,Surplus,2400,Summer,6
+2002,Coastal Andhra,28.8,890,2500,Rice,Irrigated,Average,170,22,Surplus,2550,Kharif,6
+2002,Rayalaseema,29.3,860,2300,Wheat,Rainfed,Poor,180,21,Shortage,2250,Rabi,13
+2002,North Andhra,28.4,880,2400,Rice,Irrigated,Good,140,23,Surplus,2450,Summer,5
+2003,Coastal Andhra,29.0,880,2550,Rice,Irrigated,Good,160,21,Surplus,2600,Kharif,6
+2003,Rayalaseema,29.4,850,2350,Cotton,Rainfed,Poor,190,20,Shortage,2300,Rabi,12
+2003,North Andhra,28.6,870,2450,Rice,Irrigated,Good,150,22,Surplus,2500,Summer,7
+2004,Coastal Andhra,28.6,880,2600,Rice,Irrigated,Good,160,22,Surplus,2650,Kharif,6
+2004,Rayalaseema,29.3,860,2400,Cotton,Rainfed,Poor,180,19,Shortage,2250,Rabi,13
+2004,North Andhra,28.5,875,2500,Rice,Irrigated,Good,140,23,Surplus,2550,Summer,6
+2005,Coastal Andhra,28.9,890,2650,Rice,Irrigated,Average,170,22,Surplus,2700,Kharif,5
+2005,Rayalaseema,29.4,860,2300,Cotton,Rainfed,Poor,190,20,Shortage,2200,Rabi,12
+2005,North Andhra,28.7,880,2550,Rice,Irrigated,Good,150,23,Surplus,2600,Summer,7
+2006,Coastal Andhra,29.1,880,2550,Rice,Irrigated,Good,160,21,Surplus,2600,Kharif,6
+2006,Rayalaseema,29.5,850,2400,Cotton,Rainfed,Poor,190,20,Shortage,2300,Rabi,13
+2006,North Andhra,28.9,875,2500,Rice,Irrigated,Good,140,22,Surplus,2550,Summer,5
+2007,Coastal Andhra,28.7,875,2450,Rice,Irrigated,Good,160,21,Surplus,2500,Kharif,5
+2007,Rayalaseema,29.3,860,2300,Cotton,Rainfed,Poor,180,19,Shortage,2200,Rabi,14
+2007,North Andhra,28.8,880,2400,Rice,Irrigated,Good,150,23,Surplus,2450,Summer,6
+2008,Coastal Andhra,29.0,880,2550,Rice,Irrigated,Good,160,22,Surplus,2600,Kharif,5
+2008,Rayalaseema,29.5,860,2400,Cotton,Rainfed,Poor,190,18,Shortage,2250,Rabi,13
+2008,North Andhra,28.9,875,2500,Rice,Irrigated,Good,140,23,Surplus,2550,Summer,6
+2009,Coastal Andhra,28.8,890,2600,Rice,Irrigated,Good,160,22,Surplus,2650,Kharif,6
+2009,Rayalaseema,29.4,860,2350,Cotton,Rainfed,Poor,180,19,Shortage,2300,Rabi,14
+2009,North Andhra,28.7,880,2450,Rice,Irrigated,Good,150,23,Surplus,2500,Summer,6
+2010,Coastal Andhra,28.9,885,2550,Rice,Irrigated,Good,160,21,Surplus,2600,Kharif,6
+2010,Rayalaseema,29.5,850,2400,Cotton,Rainfed,Poor,180,20,Shortage,2300,Rabi,13
+2010,North Andhra,28.8,880,2500,Rice,Irrigated,Good,140,22,Surplus,2550,Summer,7
+2011,Coastal Andhra,29.0,880,2600,Rice,Irrigated,Good,160,21,Surplus,2650,Kharif,6
+2011,Rayalaseema,29.4,860,2400,Wheat,Rainfed,Poor,180,22,Shortage,2350,Rabi,12
+2011,North Andhra,28.8,890,2500,Rice,Irrigated,Good,150,20,Surplus,2550,Summer,7
+2012,Coastal Andhra,28.9,890,2650,Rice,Irrigated,Average,170,22,Surplus,2700,Kharif,6
+2012,Rayalaseema,29.3,870,2300,Cotton,Rainfed,Poor,190,20,Shortage,2250,Rabi,13
+2012,North Andhra,28.7,880,2450,Wheat,Irrigated,Good,140,23,Surplus,2500,Summer,6
+2013,Coastal Andhra,28.8,875,2550,Rice,Irrigated,Good,160,21,Surplus,2600,Kharif,6
+2013,Rayalaseema,29.4,850,2400,Wheat,Rainfed,Poor,180,20,Shortage,2300,Rabi,14
+2013,North Andhra,28.9,880,2500,Rice,Irrigated,Good,150,22,Surplus,2550,Summer,5
+2014,Coastal Andhra,29.1,890,2600,Rice,Rainfed,Good,160,22,Surplus,2650,Kharif,5
+2014,Rayalaseema,29.5,860,2350,Cotton,Rainfed,Poor,180,19,Shortage,2200,Rabi,12
+2014,North Andhra,28.8,880,2450,Rice,Irrigated,Good,140,23,Surplus,2500,Summer,6
+2015,Coastal Andhra,28.9,880,2600,Rice,Irrigated,Average,150,21,Surplus,2650,Kharif,6
+2015,Rayalaseema,29.3,850,2300,Wheat,Rainfed,Poor,190,18,Shortage,2250,Rabi,13
+2015,North Andhra,28.7,875,2450,Rice,Irrigated,Good,140,22,Surplus,2500,Summer,6
+2016,Coastal Andhra,29.0,890,2650,Rice,Rainfed,Average,160,22,Surplus,2700,Kharif,6
+2016,Rayalaseema,29.4,860,2400,Cotton,Rainfed,Poor,190,19,Shortage,2300,Rabi,14
+2016,North Andhra,28.8,880,2500,Rice,Irrigated,Good,150,21,Surplus,2550,Summer,7
+2017,Coastal Andhra,29.1,885,2550,Rice,Irrigated,Good,160,21,Surplus,2600,Kharif,6
+2017,Rayalaseema,29.5,850,2300,Cotton,Rainfed,Poor,180,18,Shortage,2250,Rabi,13
+2017,North Andhra,28.9,875,2450,Rice,Irrigated,Good,140,23,Surplus,2500,Summer,5
+2018,Coastal Andhra,28.9,890,2650,Rice,Rainfed,Good,160,22,Surplus,2700,Kharif,5
+2018,Rayalaseema,29.2,860,2400,Wheat,Rainfed,Poor,190,20,Shortage,2300,Rabi,14
+2018,North Andhra,28.8,880,2500,Rice,Irrigated,Good,150,21,Surplus,2550,Summer,7
+2019,Coastal Andhra,29.0,880,2600,Rice,Irrigated,Good,150,21,Surplus,2650,Kharif,6
+2019,Rayalaseema,29.4,860,2400,Wheat,Rainfed,Poor,180,19,Shortage,2300,Rabi,12
+2019,North Andhra,28.9,875,2450,Rice,Irrigated,Good,140,23,Surplus,2500,Summer,5
+2020,Coastal Andhra,28.8,890,2650,Rice,Rainfed,Average,160,22,Surplus,2700,Kharif,6
+2020,Rayalaseema,29.2,860,2350,Wheat,Rainfed,Poor,190,20,Shortage,2300,Rabi,13
+2020,North Andhra,28.7,880,2450,Rice,Irrigated,Good,140,22,Surplus,2500,Summer,6
+2021,Coastal Andhra,28.9,880,2550,Rice,Irrigated,Good,160,21,Surplus,2600,Kharif,5
+2021,Rayalaseema,29.4,860,2400,Cotton,Rainfed,Poor,180,19,Shortage,2250,Rabi,13
+2021,North Andhra,28.7,875,2450,Rice,Irrigated,Good,140,23,Surplus,2500,Summer,6
+2022,Coastal Andhra,29.0,885,2650,Rice,Irrigated,Good,160,21,Surplus,2700,Kharif,6
+2022,Rayalaseema,29.5,850,2350,Wheat,Rainfed,Poor,190,20,Shortage,2300,Rabi,14
+2022,North Andhra,28.8,880,2500,Rice,Irrigated,Good,150,23,Surplus,2550,Summer,5
