@@ -29,29 +29,26 @@ with open("scaler.pkl", "rb") as f:
 def home():
     return jsonify({"message": "Food Scarcity Prediction API is running!"})
 
-@app.route("/categories", methods=["GET"])
-def get_categories():
-    """Returns available categories for debugging."""
-    categories = {col: label_encoders[col].classes_.tolist() for col in categorical_cols}
-    return jsonify(categories)
-
 @app.route("/predict", methods=["POST"])
 def predict():
     try:
-        data = request.json  # Expecting JSON input
+        # Ensure request is JSON
+        if not request.is_json:
+            return jsonify({"error": "Invalid request. Please send JSON data with 'Content-Type: application/json'."}), 415
+
+        data = request.get_json()  # Get JSON input
 
         # Convert categorical inputs to lowercase before encoding
         input_features = []
         for col in categorical_cols:
-            user_input = data[col].strip().lower()  # Convert input to lowercase
+            user_input = data[col].strip().lower()
 
             if user_input in label_encoders[col].classes_:
                 input_features.append(label_encoders[col].transform([user_input])[0])
             else:
-                available_values = label_encoders[col].classes_.tolist()
                 return jsonify({
                     "error": f"Invalid value for {col}: {data[col]}",
-                    "valid_options": available_values
+                    "valid_options": label_encoders[col].classes_.tolist()
                 })
 
         # Convert and scale numerical inputs
