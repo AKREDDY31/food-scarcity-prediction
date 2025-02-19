@@ -29,6 +29,12 @@ with open("scaler.pkl", "rb") as f:
 def home():
     return jsonify({"message": "Food Scarcity Prediction API is running!"})
 
+@app.route("/categories", methods=["GET"])
+def get_categories():
+    """Returns available categories for debugging."""
+    categories = {col: label_encoders[col].classes_.tolist() for col in categorical_cols}
+    return jsonify(categories)
+
 @app.route("/predict", methods=["POST"])
 def predict():
     try:
@@ -38,10 +44,10 @@ def predict():
 
         data = request.get_json()  # Get JSON input
 
-        # Convert categorical inputs to lowercase before encoding
+        # Encode categorical inputs
         input_features = []
         for col in categorical_cols:
-            user_input = data[col].strip().lower()
+            user_input = data[col].strip()  # **Removed .lower() to match exact LabelEncoder values**
 
             if user_input in label_encoders[col].classes_:
                 input_features.append(label_encoders[col].transform([user_input])[0])
