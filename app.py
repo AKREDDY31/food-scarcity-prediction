@@ -25,22 +25,20 @@ for col in categorical_cols:
 with open("scaler.pkl", "rb") as f:
     scaler = pickle.load(f)
 
-@app.route("/", methods=["GET"])
-def home():
-    return jsonify({"message": "Food Scarcity Prediction API is running!"})
-
 @app.route("/predict", methods=["POST"])
 def predict():
     try:
-        data = request.json  # Expecting {"region": "xyz", "crop_type": "abc", ..., "numerical_features": [...]}
+        data = request.json  # Expecting JSON input
 
-        # Encode categorical inputs
+        # Encode categorical inputs (convert to lowercase to match training data)
         input_features = []
         for col in categorical_cols:
-            if data[col] in label_encoders[col].classes_:
-                input_features.append(label_encoders[col].transform([data[col]])[0])
+            user_input = data[col].strip().lower()  # Convert input to lowercase
+
+            if user_input in label_encoders[col].classes_:
+                input_features.append(label_encoders[col].transform([user_input])[0])
             else:
-                return jsonify({"error": f"Invalid value for {col}: {data[col]}"}), 400
+                return jsonify({"error": f"Invalid value for {col}: {data[col]}"})
 
         # Convert and scale numerical inputs
         numerical_inputs = np.array(data["numerical_features"]).reshape(1, -1)
